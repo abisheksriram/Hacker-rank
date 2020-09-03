@@ -36,3 +36,39 @@ int main() {
     
     return 0;
 }
+
+//pointers
+
+#include <stdio.h>
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+void update(int *a,int *b) {
+   int aa=*a,bb=*b;
+
+    *a= aa + bb;
+    
+    *b= aa- bb;
+}
+
+int main() {
+     int a=10, b=15;
+     int *pa = &a, *pb = &b;
+//       printf("%d\t%d    %d %d\n", a, b,*pa,*pb);
+//     a++;
+//       printf("%d\t%d    %d %d\n", a, b,*pa,*pb);
+//     (*pa)++;
+   scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a,abs( b));
+//print address of a :  &a ,pa
+//value of a          :  a,*pa
+//address of oa         : &pa
+//      value of address  :    *&a
+// int a=19;
+// int *pa=&a;
+// int **ppa=&pa;
+// cout<<**ppa;
+
+    return 0;
+}
