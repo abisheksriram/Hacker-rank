@@ -1,0 +1,48 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    //n=no of arrays
+    //s =no of searches
+    //temp=to get size of every row
+    int n,s;
+    int temp;
+    cin>>n;
+    cin>>s;
+     
+    int **a=new int*[n];
+    for(int i=0;i<n;i++)
+    {   cin>>temp;
+      a[i]=new int [temp];
+        for(int j=0;j<temp;j++)
+            cin>>a[i][j];
+    }
+
+    int search_array; //which array to search
+    int index;//in which index to be searched
+
+
+    for(int i=0;i<s;i++)
+    {
+            cin>>search_array;
+            cin>>index;
+
+        cout<<a[search_array][index]<<endl;
+
+
+    }
+    // *a[1]=new int[temp];
+    // for(int j=0;j<temp;j++)
+    //     cin>>a[1][j];
+    
+
+
+    
+    return 0;
+}
