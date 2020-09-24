@@ -43,8 +43,8 @@ int main()
       cout<<" "<<i[j];
   //loop -2
   cout<<"\nloop 2:";
-  for(int j=i.begin();j==i.end();j++)
-      cout<<" "<<j;
+  for(auto j=i.begin();j!=i.end();j++)
+      cout<<" "<<*j;
       
   //insert at position vector_name.insert (position, val)
   //vector:0 1 3
